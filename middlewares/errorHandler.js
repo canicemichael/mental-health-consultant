@@ -1,5 +1,5 @@
 const CustomError = require('../helpers/CustomError');
-const {response} = require('../helpers/message');
+const { response } = require('../helpers/message');
 
 module.exports = (error, res, req, next) => {
     console.log(error);
