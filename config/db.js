@@ -4,8 +4,8 @@ const uri = 'mongodb+srv://canice:mental-health@cluster0.te4nyfn.mongodb.net/?re
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
+    // useCreateIndex: true,
+    // useFindAndModify: false
 }
 
 module.exports = function initDB(){
