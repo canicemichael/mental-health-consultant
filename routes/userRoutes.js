@@ -6,12 +6,10 @@ const { isAdmin, isUser } = require('../middlewares/auth');
 module.exports = function(){
     router.post('/signup', signupUser);
     router.post('/signin', signinUser);
-    router.get('/', isAdmin, getUsers);
+    router.get('/',  getUsers);
     router.get('/:userId', isUser, getUser);
     router.put('/:userId', isUser, editUser);
     router.delete('/:userId', isUser, deleteUser);
 
     return router;
 }
-
-module.exports = router;
