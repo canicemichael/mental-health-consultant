@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema();
+const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
 
 const TherapistSchema = new Schema(
@@ -47,6 +47,11 @@ const TherapistSchema = new Schema(
         bio: {
             type: String,
             required: [true, 'bio is required']
+        },
+        //a verify property to show that the admin has verified this therapist to be legit//we will need a way to verify a therapist
+        isVerified: {
+            type: Boolean,
+            default: false
         },
         appointments: [
             {
